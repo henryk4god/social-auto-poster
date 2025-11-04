@@ -3,119 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Social Auto-Poster Dashboard</title>
+  <title>Social Auto-Poster</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="app-container">
-    <h2>📅 Social Auto-Poster</h2>
-    <p>Schedule once, post everywhere!</p>
+  <div class="container">
+    <header>
+      <h1>📅 Social Auto-Poster</h1>
+      <p>Schedule once, post everywhere — Telegram, Facebook, X, LinkedIn.</p>
+    </header>
 
-    <div id="userSection">
-      <input id="email" placeholder="Enter your email">
-      <button onclick="registerUser()">Start Free Trial</button>
-    </div>
+    <section class="plans">
+      <div class="card">
+        <h3>Free Trial</h3>
+        <p>Try out all features for 7 days.</p>
+        <p><strong>₦0</strong></p>
+        <button onclick="startFreeTrial()">Start Free Trial</button>
+      </div>
 
-    <div id="postSection" style="display:none;">
-      <h3>Create New Post</h3>
-      <select id="platform">
-        <option value="telegram">Telegram</option>
-        <option value="facebook">Facebook</option>
-        <option value="twitter">Twitter</option>
-        <option value="linkedin">LinkedIn</option>
-      </select>
-      <textarea id="message" placeholder="Write your post..."></textarea>
-      <input id="media" placeholder="Optional image/video URL">
-      <input id="schedule" type="datetime-local">
-      <button onclick="createPost()">Schedule Post</button>
+      <div class="card">
+        <h3>Pro Plan</h3>
+        <p>Post to up to 5 platforms automatically.</p>
+        <p><strong>₦9,000/month</strong></p>
+        <button onclick="upgradeNow()">Upgrade Now</button>
+      </div>
 
-      <div id="usageStats"></div>
-      <button onclick="upgradeNow()">💎 Upgrade Now</button>
-    </div>
+      <div class="card">
+        <h3>Agency Plan</h3>
+        <p>Unlimited posts + Priority support.</p>
+        <p><strong>₦20,000/month</strong></p>
+        <button onclick="upgradeNow()">Upgrade Now</button>
+      </div>
+    </section>
 
-    <footer>Powered by Henry’s SocialSyncer</footer>
-  </div>
+    <section id="trialSection" style="display:none;">
+      <h2>Start Your Free Trial</h2>
+      <input id="email" placeholder="Enter your email address">
+      <button onclick="registerUser()">Submit</button>
+    </section>
 
-  <script src="script.js"></script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Social Auto-Poster Dashboard</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="app-container">
-    <h2>📅 Social Auto-Poster</h2>
-    <p>Schedule once, post everywhere!</p>
-
-    <div id="userSection">
-      <input id="email" placeholder="Enter your email">
-      <button onclick="registerUser()">Start Free Trial</button>
-    </div>
-
-    <div id="postSection" style="display:none;">
-      <h3>Create New Post</h3>
-      <select id="platform">
-        <option value="telegram">Telegram</option>
-        <option value="facebook">Facebook</option>
-        <option value="twitter">Twitter</option>
-        <option value="linkedin">LinkedIn</option>
-      </select>
-      <textarea id="message" placeholder="Write your post..."></textarea>
-      <input id="media" placeholder="Optional image/video URL">
-      <input id="schedule" type="datetime-local">
-      <button onclick="createPost()">Schedule Post</button>
-
-      <div id="usageStats"></div>
-      <button onclick="upgradeNow()">💎 Upgrade Now</button>
-    </div>
-
-    <footer>Powered by Henry’s SocialSyncer</footer>
-  </div>
-
-  <script src="script.js"></script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Social Auto-Poster Dashboard</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="app-container">
-    <h2>📅 Social Auto-Poster</h2>
-    <p>Schedule once, post everywhere!</p>
-
-    <div id="userSection">
-      <input id="email" placeholder="Enter your email">
-      <button onclick="registerUser()">Start Free Trial</button>
-    </div>
-
-    <div id="postSection" style="display:none;">
-      <h3>Create New Post</h3>
-      <select id="platform">
-        <option value="telegram">Telegram</option>
-        <option value="facebook">Facebook</option>
-        <option value="twitter">Twitter</option>
-        <option value="linkedin">LinkedIn</option>
-      </select>
-      <textarea id="message" placeholder="Write your post..."></textarea>
-      <input id="media" placeholder="Optional image/video URL">
-      <input id="schedule" type="datetime-local">
-      <button onclick="createPost()">Schedule Post</button>
-
-      <div id="usageStats"></div>
-      <button onclick="upgradeNow()">💎 Upgrade Now</button>
-    </div>
-
-    <footer>Powered by Henry’s SocialSyncer</footer>
+    <footer>
+      <p>Powered by Henry’s SocialSyncer</p>
+    </footer>
   </div>
 
   <script src="script.js"></script>
