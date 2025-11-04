@@ -1,6 +1,6 @@
 function registerUser() {
   const email = document.getElementById("email").value;
-  const scriptURL = "YOUR_DEPLOYED_WEBAPP_URL_HERE";
+  const scriptURL = "https://script.google.com/macros/s/AKfycbyuUa6jxe2v5WOGpWICnz26b9prEO_187IsRmOa3c55Tc_C67FcKlQey_AOFPvaDcNa/exec";
   const callbackName = "handleResponse";
 
   // Remove old script if exists
