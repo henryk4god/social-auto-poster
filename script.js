@@ -1,9 +1,14 @@
 function registerUser() {
   const email = document.getElementById("email").value;
-  const scriptURL = "https://script.google.com/macros/s/AKfycbyuUa6jxe2v5WOGpWICnz26b9prEO_187IsRmOa3c55Tc_C67FcKlQey_AOFPvaDcNa/exec";
+  if (!email) {
+    alert("Please enter your email.");
+    return;
+  }
+
+  const scriptURL = "https://script.google.com/macros/s/AKfycbyuUa6jxe2v5WOGpWICnz26b9prEO_187IsRmOa3c55Tc_C67FcKlQey_AOFPvaDcNa/exec"; // Apps Script URL
   const callbackName = "handleResponse";
 
-  // Remove old script if exists
+  // Remove any old JSONP script
   const oldScript = document.getElementById("jsonpScript");
   if (oldScript) oldScript.remove();
 
@@ -14,7 +19,11 @@ function registerUser() {
   document.body.appendChild(script);
 }
 
-// JSONP callback function
+// JSONP callback
 function handleResponse(response) {
   alert(response.message);
+  
+  // Optional: show post creation section after free trial starts
+  document.getElementById("userSection").style.display = "none";
+  document.getElementById("postSection").style.display = "block";
 }
