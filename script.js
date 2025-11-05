@@ -1,3 +1,4 @@
+
 // script.js
 
 // --- CONFIGURATION ---
@@ -103,6 +104,8 @@ document.getElementById('connect-form').addEventListener('submit', async (e) => 
     const token = document.getElementById('platform-token').value;
     const id = document.getElementById('platform-id').value; // Chat ID or Page ID
 
+    console.log('Connecting platform:', platform);
+
     const payload = { email, platform, token, id };
     const result = await callApi('connect', payload);
 
@@ -116,6 +119,7 @@ document.getElementById('connect-form').addEventListener('submit', async (e) => 
 
 // STEP 3: Handle Post Scheduling
 document.getElementById('schedule-form').addEventListener('submit', async (e) => {
+    alert('Submitting post. Please check the console for status.');
     e.preventDefault();
     const email = document.getElementById('schedule-email').value.toLowerCase();
     const platform = document.getElementById('schedule-platform').value;
