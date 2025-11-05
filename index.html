@@ -1,52 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Social Auto-Poster</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Auto-Poster Dashboard</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
+
     <header>
-      <h1>📅 Social Auto-Poster</h1>
-      <p>Schedule once, post everywhere — Telegram, Facebook, X, LinkedIn.</p>
+        <h1>AutoPostr 🚀</h1>
+        <p>Schedule your content easily using the power of Google Sheets!</p>
     </header>
 
-    <section class="plans">
-      <div class="card">
-        <h3>Free Trial</h3>
-        <p>Try out all features for 7 days.</p>
-        <p><strong>₦0</strong></p>
-        <button onclick="startFreeTrial()">Start Free Trial</button>
-      </div>
+    <main>
+        <div id="message-area" class="hidden"></div>
+        
+        <section id="signup-section" class="card">
+            <h2>👤 1. Sign Up for Free Trial</h2>
+            <form id="signup-form">
+                <input type="text" id="signup-name" placeholder="Your Name" required>
+                <input type="email" id="signup-email" placeholder="Email (Your unique ID)" required>
+                <button type="submit">Start 7-Day Trial</button>
+                <p class="note">You will use this email for all logins and tracking.</p>
+            </form>
+        </section>
+        
+        <section id="connect-section" class="card hidden">
+            <h2>🔗 2. Connect Social Media</h2>
+            <form id="connect-form">
+                <input type="email" id="connect-email" placeholder="Your Email" required>
+                <select id="platform-select" required>
+                    <option value="">Select Platform</option>
+                    <option value="telegram">Telegram (Chat/Channel ID)</option>
+                    <option value="facebook">Facebook (Page Token)</option>
+                </select>
+                <input type="text" id="platform-token" placeholder="Access Token or Bot Token" required>
+                <input type="text" id="platform-id" placeholder="Chat ID / Page ID" required>
+                <button type="submit">Connect/Update Token</button>
+                <p class="note">For Telegram, your main Apps Script Bot needs to be an admin in the Chat ID provided.</p>
+            </form>
+        </section>
 
-      <div class="card">
-        <h3>Pro Plan</h3>
-        <p>Post to up to 5 platforms automatically.</p>
-        <p><strong>₦9,000/month</strong></p>
-        <button onclick="upgradeNow()">Upgrade Now</button>
-      </div>
+        <section id="schedule-section" class="card hidden">
+            <h2>📅 3. Schedule a New Post</h2>
+            <form id="schedule-form">
+                <input type="email" id="schedule-email" placeholder="Your Email" required>
+                <select id="schedule-platform" required>
+                    <option value="">Select Platform</option>
+                    <option value="telegram">Telegram</option>
+                    <option value="facebook">Facebook</option>
+                </select>
+                <textarea id="schedule-message" placeholder="Your post content..." required></textarea>
+                <input type="url" id="schedule-media" placeholder="Optional: Image/Video URL">
+                <label for="schedule-time">Schedule Date and Time (Local)</label>
+                <input type="datetime-local" id="schedule-time" required>
+                <button type="submit">Schedule Post</button>
+            </form>
+        </section>
+        
+        <section id="status-section" class="card hidden">
+            <h2>💰 4. My Account Status</h2>
+            <p>Email: <strong id="status-email"></strong></p>
+            <p>Plan: <strong id="status-plan"></strong></p>
+            <p>Expires: <strong id="status-expiry"></strong></p>
+            
+            <div id="upgrade-area">
+                <p>Ready for unlimited access?</p>
+                <button id="upgrade-button" class="btn-upgrade">Upgrade Now (Contact Admin)</button>
+            </div>
+            
+            <h3>Post History</h3>
+            <table id="posts-table">
+                <thead>
+                    <tr><th>Platform</th><th>Schedule</th><th>Status</th></tr>
+                </thead>
+                <tbody>
+                    </tbody>
+            </table>
+        </section>
 
-      <div class="card">
-        <h3>Agency Plan</h3>
-        <p>Unlimited posts + Priority support.</p>
-        <p><strong>₦20,000/month</strong></p>
-        <button onclick="upgradeNow()">Upgrade Now</button>
-      </div>
-    </section>
-
-    <section id="trialSection" style="display:none;">
-      <h2>Start Your Free Trial</h2>
-      <input id="email" placeholder="Enter your email address">
-      <button onclick="registerUser()">Submit</button>
-    </section>
+    </main>
 
     <footer>
-      <p>Powered by Henry’s SocialSyncer</p>
+        <p>&copy; 2025 AutoPostr. Built with Google Apps Script & GitHub Pages.</p>
     </footer>
-  </div>
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
