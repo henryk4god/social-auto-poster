@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Social Auto-Poster Dashboard</title>
+    <title>Welcome to Social Auto-Poster</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,89 +15,21 @@
         </div>
         <nav>
             <a href="login.html" class="btn">Login</a>
+            <a href="signup.html" class="btn">Sign Up</a>
         </nav>
     </header>
 
     <main>
-        <div id="message-area" class="hidden"></div>
-        
-        <section id="signup-section" class="card">
-            <h2>👤 1. Sign Up for Free Trial</h2>
-            <form id="signup-form">
-                <input type="text" id="signup-name" placeholder="Your Name" required>
-                <input type="email" id="signup-email" placeholder="Email (Your unique ID)" required>
-                <button type="submit">Start 7-Day Trial</button>
-                <p class="note">You will use this email for all logins and tracking.</p>
-            </form>
+        <section class="hero">
+            <h2>Automate Your Social Media Posting</h2>
+            <p>Sign up for a free trial and start scheduling your posts today!</p>
+            <a href="signup.html" class="btn-upgrade">Get Started</a>
         </section>
-        
-        <section id="connect-section" class="card hidden">
-            <h2>🔗 2. Connect Social Media</h2>
-            <form id="connect-form">
-                <input type="email" id="connect-email" placeholder="Your Email" required>
-                <select id="platform-select" required>
-                    <option value="">Select Platform</option>
-                    <option value="telegram">Telegram (Chat/Channel ID)</option>
-                    <option value="facebook">Facebook (Page Token)</option>
-                    <option value="twitter">Twitter</option>
-                    <option value="instagram">Instagram</option>
-                    <option value="linkedin">LinkedIn</option>
-                </select>
-                <input type="text" id="platform-token" placeholder="Access Token or Bot Token" required>
-                <input type="text" id="platform-id" placeholder="Chat ID / Page ID" required>
-                <button type="submit">Connect/Update Token</button>
-                <p class="note">For Telegram, your Bot Token needs to be an admin in the Chat ID provided.</p>
-            </form>
-        </section>
-
-        <section id="schedule-section" class="card hidden">
-            <h2>📅 3. Schedule a New Post</h2>
-            <form id="schedule-form">
-                <input type="email" id="schedule-email" placeholder="Your Email" required>
-                <select id="schedule-platform" required>
-                    <option value="">Select Platform</option>
-                    <option value="telegram">Telegram</option>
-                    <option value="facebook">Facebook</option>
-                    <option value="twitter">Twitter</option>
-                    <option value="instagram">Instagram</option>
-                    <option value="linkedin">LinkedIn</option>
-                </select>
-                <textarea id="schedule-message" placeholder="Your post content..." required></textarea>
-                <input type="url" id="schedule-media" placeholder="Optional: Image/Video URL">
-                <label for="schedule-time">Schedule Date and Time (Local)</label>
-                <input type="datetime-local" id="schedule-time" required>
-                <button type="submit">Schedule Post</button>
-            </form>
-        </section>
-        
-        <section id="status-section" class="card hidden">
-            <h2>💰 4. My Account Status</h2>
-            <p>Email: <strong id="status-email"></strong></p>
-            <p>Plan: <strong id="status-plan"></strong></p>
-            <p>Expires: <strong id="status-expiry"></strong></p>
-            <p class="note">Subscription: N5,000/month after your 7-day free trial.</p>
-            
-            <div id="upgrade-area">
-                <p>Ready for unlimited access?</p>
-                <a href="https://paydev-web.github.io/autoposter/" id="upgrade-button" class="btn-upgrade" target="_blank">Upgrade Now</a>
-            </div>
-            
-            <h3>Post History</h3>
-            <table id="posts-table">
-                <thead>
-                    <tr><th>Platform</th><th>Schedule</th><th>Status</th></tr>
-                </thead>
-                <tbody>
-                    </tbody>
-            </table>
-        </section>
-
     </main>
 
     <footer>
         <p>&copy; 2025 AutoPostr.</p>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
