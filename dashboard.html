@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Auto Poster</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="assets/logo.png" alt="Auto Poster Logo">
+            <h1>Auto Poster</h1>
+        </div>
+        <nav>
+            <button id="logout-button" class="btn">Logout</button>
+        </nav>
+    </header>
+
+    <main>
+        <div id="message-area" class="hidden"></div>
+        
+        <section id="connect-section" class="card">
+            <h2>🔗 1. Connect Social Media</h2>
+            <form id="connect-form">
+                <input type="email" id="connect-email" placeholder="Your Email" required readonly>
+                <select id="platform-select" required>
+                    <option value="">Select Platform</option>
+                    <option value="telegram">Telegram (Chat/Channel ID)</option>
+                    <option value="facebook">Facebook (Page Token)</option>
+                    <option value="twitter">Twitter</option>
+                    <option value="instagram">Instagram</option>
+                    <option value="linkedin">LinkedIn</option>
+                </select>
+                <input type="text" id="platform-token" placeholder="Access Token or Bot Token" required>
+                <input type="text" id="platform-id" placeholder="Chat ID / Page ID" required>
+                <button type="submit">Connect/Update Token</button>
+                <p class="note">For Telegram, your Bot Token needs to be an admin in the Chat ID provided.</p>
+            </form>
+        </section>
+
+        <section id="schedule-section" class="card">
+            <h2>📅 2. Schedule a New Post</h2>
+            <form id="schedule-form">
+                <input type="email" id="schedule-email" placeholder="Your Email" required readonly>
+                <select id="schedule-platform" required>
+                    <option value="">Select Platform</option>
+                    <option value="telegram">Telegram</option>
+                    <option value="facebook">Facebook</option>
+                    <option value="twitter">Twitter</option>
+                    <option value="instagram">Instagram</option>
+                    <option value="linkedin">LinkedIn</option>
+                </select>
+                <textarea id="schedule-message" placeholder="Your post content..." required></textarea>
+                <input type="url" id="schedule-media" placeholder="Optional: Image/Video URL">
+                <label for="schedule-time">Schedule Date and Time (Local)</label>
+                <input type="datetime-local" id="schedule-time" required>
+                <button type="submit">Schedule Post</button>
+            </form>
+        </section>
+        
+        <section id="status-section" class="card">
+            <h2>💰 3. My Account Status</h2>
+            <p>Email: <strong id="status-email"></strong></p>
+            <p>Plan: <strong id="status-plan"></strong></p>
+            <p>Expires: <strong id="status-expiry"></strong></p>
+            <p class="note">Subscription: N5,000/month after your 7-day free trial.</p>
+            
+            <div id="upgrade-area">
+                <p>Ready for unlimited access?</p>
+                <a href="https://paydev-web.github.io/autoposter/" id="upgrade-button" class="btn-upgrade" target="_blank">Upgrade Now</a>
+            </div>
+            
+            <h3>Post History</h3>
+            <table id="posts-table">
+                <thead>
+                    <tr><th>Platform</th><th>Schedule</th><th>Status</th></tr>
+                </thead>
+                <tbody>
+                    </tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 AutoPostr.</p>
+    </footer>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
