@@ -103,8 +103,8 @@ async function showDashboard(email) {
     const statsResult = await callApi('getStats', { email: email });
     if (statsResult.success && statsResult.user) {
         const user = statsResult.user;
-        document.getElementById('status-plan').textContent = user.plan ? user.plan.toUpperCase() : 'N/A';
-        document.getElementById('status-expiry').textContent = user.trial_end ? new Date(user.trial_end).toLocaleDateString() : 'N/A';
+        document.getElementById('status-plan').textContent = (user && user.plan) ? user.plan.toUpperCase() : 'N/A';
+        document.getElementById('status-expiry').textContent = (user && user.trial_end) ? new Date(user.trial_end).toLocaleDateString() : 'N/A';
         
         const tableBody = document.getElementById('posts-table').getElementsByTagName('tbody')[0];
         tableBody.innerHTML = '';
@@ -114,8 +114,8 @@ async function showDashboard(email) {
                 let row = tableBody.insertRow();
                 row.insertCell().textContent = post.platform;
                 row.insertCell().textContent = new Date(post.schedule).toLocaleString();
-                row.insertCell().textContent = post.status ? post.status.toUpperCase() : 'N/A';
-                row.className = post.status && post.status.toLowerCase() === 'pending' ? 'note' : '';
+                row.insertCell().textContent = (post && post.status) ? post.status.toUpperCase() : 'N/A';
+                row.className = (post && post.status) && post.status.toLowerCase() === 'pending' ? 'note' : '';
             });
         }
     } else if (statsResult.message.includes('not found')) {
