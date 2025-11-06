@@ -56,7 +56,7 @@ function clearForm(formId) {
 
 document.getElementById('connect-form').addEventListener('submit', async (e) => {
     e.preventDefault();
-    const email = document.getElementById('connect-email').value.toLowerCase();
+    const email = document.getElementById('connect-email').value.trim().toLowerCase();
     const platform = document.getElementById('platform-select').value;
     const token = document.getElementById('platform-token').value;
     const id = document.getElementById('platform-id').value;
@@ -71,9 +71,8 @@ document.getElementById('connect-form').addEventListener('submit', async (e) => 
 });
 
 document.getElementById('schedule-form').addEventListener('submit', async (e) => {
-    displayMessage('Submitting post... Please wait.', 'info'); // Test message
     e.preventDefault();
-    const email = document.getElementById('schedule-email').value.toLowerCase();
+    const email = document.getElementById('schedule-email').value.trim().toLowerCase();
     const platform = document.getElementById('schedule-platform').value;
     const message = document.getElementById('schedule-message').value;
     const media = document.getElementById('schedule-media').value;
