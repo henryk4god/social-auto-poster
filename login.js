@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (loginForm) {
         loginForm.addEventListener('submit', async function (e) {
             e.preventDefault();
-            const email = document.getElementById('email').value.toLowerCase();
+            const email = document.getElementById('email').value.trim().toLowerCase();
 
             const result = await callApi('getStats', { email: email });
 
