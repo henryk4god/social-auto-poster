@@ -68,6 +68,7 @@ document.getElementById('connect-form').addEventListener('submit', async (e) => 
 });
 
 document.getElementById('schedule-form').addEventListener('submit', async (e) => {
+    displayMessage('Submitting...', 'info'); // Test message
     alert('Submitting post. Please wait for confirmation.');
     e.preventDefault();
     const email = document.getElementById('schedule-email').value.toLowerCase();
