@@ -40,9 +40,12 @@ function displayMessage(message, type = 'success') {
     messageArea.textContent = message;
     messageArea.className = type;
     messageArea.classList.remove('hidden');
+    
+    const timeout = type === 'info' ? 10000 : 5000; // 10 seconds for info, 5 for others
+
     setTimeout(() => {
         messageArea.classList.add('hidden');
-    }, 5000);
+    }, timeout);
 }
 
 function clearForm(formId) {
@@ -68,8 +71,7 @@ document.getElementById('connect-form').addEventListener('submit', async (e) => 
 });
 
 document.getElementById('schedule-form').addEventListener('submit', async (e) => {
-    displayMessage('Submitting...', 'info'); // Test message
-    alert('Submitting post. Please wait for confirmation.');
+    displayMessage('Submitting post... Please wait.', 'info'); // Test message
     e.preventDefault();
     const email = document.getElementById('schedule-email').value.toLowerCase();
     const platform = document.getElementById('schedule-platform').value;
