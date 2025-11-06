@@ -1,5 +1,3 @@
-alert("signup.js loaded!");
-
 document.addEventListener('DOMContentLoaded', function () {
     const signupForm = document.getElementById('signup-form');
     const GAS_WEBAPP_URL = 'https://script.google.com/macros/s/AKfycby9LRzfLQ-2LbjKpKahfEgvYhqC6dRtag9JYuNFoP8YnlUsdpCiGb_9NCLCvrThwnuX/exec';
