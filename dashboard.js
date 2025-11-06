@@ -22,10 +22,15 @@ async function callApi(route, payload) {
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
-        return await response.json();
+        const text = await response.text();
+        try {
+            return JSON.parse(text);
+        } catch (e) {
+            throw new Error("Invalid JSON response from server: " + text);
+        }
     } catch (error) {
         console.error('API Call Error:', error);
-        displayMessage(`Connection Error: ${error.message}. Check console for details.`, 'error');
+        displayMessage(`API Error: ${error.message}`, 'error');
         return { success: false, message: 'Failed to communicate with the backend server.' };
     }
 }
