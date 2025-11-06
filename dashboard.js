@@ -63,6 +63,7 @@ document.getElementById('connect-form').addEventListener('submit', async (e) => 
 });
 
 document.getElementById('schedule-form').addEventListener('submit', async (e) => {
+    alert('Submitting post. Please wait for confirmation.');
     e.preventDefault();
     const email = document.getElementById('schedule-email').value.toLowerCase();
     const platform = document.getElementById('schedule-platform').value;
@@ -77,11 +78,6 @@ document.getElementById('schedule-form').addEventListener('submit', async (e) =>
     } else {
         displayMessage(`❌ ${result.message}`, 'error');
     }
-});
-
-document.getElementById('upgrade-button').addEventListener('click', () => {
-    const whatsappLink = `https://wa.me/${WHATSAPP_NUMBER}?text=Hi! I would like to upgrade my AutoPostr account. My email is ${document.getElementById('status-email').textContent}.`;
-    window.open(whatsappLink, '_blank');
 });
 
 document.getElementById('logout-button').addEventListener('click', () => {
