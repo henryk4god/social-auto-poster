@@ -1,7 +1,7 @@
 // dashboard.js
 
 // --- CONFIGURATION ---
-const GAS_WEBAPP_URL = 'https://script.google.com/macros/s/AKfycbxKsqKMx-y8XiF9CkPNOiYoZzjCUuUYPCAhodOnAKsAtnbbZIo5jRZk37JFVkt2SelD/exec'; 
+const GAS_WEBAPP_URL = 'https://script.google.com/macros/s/AKfycby9LRzfLQ-2LbjKpKahfEgvYhqC6dRtag9JYuNFoP8YnlUsdpCiGb_9NCLCvrThwnuX/exec'; 
 const API_SECRET_KEY = 'MySuperSecretKeyForAutoPostr2025!'; 
 const WHATSAPP_NUMBER = '+2349033314886';
 
