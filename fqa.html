@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Poster - Frequently Asked Questions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .faq-container {
+            padding: 20px;
+        }
+        
+        .faq-item {
+            margin-bottom: 10px;
+            border: 1px solid #e1e4e8;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            background-color: #f6f8fa;
+            padding: 18px 20px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+        
+        .faq-question:hover {
+            background-color: #eaeef2;
+        }
+        
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+        
+        .faq-question.active::after {
+            transform: rotate(45deg);
+        }
+        
+        .faq-answer {
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            background-color: white;
+        }
+        
+        .faq-answer.active {
+            padding: 20px;
+            max-height: 2000px;
+        }
+        
+        .faq-answer p {
+            margin-bottom: 15px;
+        }
+        
+        .faq-answer ol, .faq-answer ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .faq-answer li {
+            margin-bottom: 8px;
+        }
+        
+        .note {
+            background-color: #e7f3ff;
+            border-left: 4px solid #2196F3;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        
+        .prerequisite {
+            background-color: #fff8e1;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        
+        a {
+            color: #2575fc;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #f1f1f1;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 0.9rem;
+            border-top: 1px solid #eaeef2;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .faq-question {
+                font-size: 1rem;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Auto Poster FAQ</h1>
+            <p class="subtitle">Frequently Asked Questions about connecting your social media accounts</p>
+        </header>
+        
+        <div class="faq-container">
+            <!-- FAQ Item 1 -->
+            <div class="faq-item">
+                <div class="faq-question">1. How To Sign Up To Auto Poster</div>
+                <div class="faq-answer">
+                    <p>To sign up, go to our website and click the 'Sign Up' button. Fill out the registration form and you'll be ready to go!</p>
+                </div>
+            </div>
+            
+            <!-- FAQ Item 2 -->
+            <div class="faq-item">
+                <div class="faq-question">2. How To Login To Auto Poster</div>
+                <div class="faq-answer">
+                    <p>To login, go to our website and click the 'Login' button. Enter your email and password to access your dashboard.</p>
+                </div>
+            </div>
+            
+            <!-- FAQ Item 3 -->
+            <div class="faq-item">
+                <div class="faq-question">3. How To Schedule Post In Auto Poster</div>
+                <div class="faq-answer">
+                    <p>To schedule a post, go to your dashboard, click 'Add Post', write your content, select the social media platforms, and set the date and time for posting.</p>
+                </div>
+            </div>
+            
+            <!-- FAQ Item 4 -->
+            <div class="faq-item">
+                <div class="faq-question">4. How To Subscribe Auto Poster</div>
+                <div class="faq-answer">
+                    <p>To subscribe for unlimited usage, please make a payment of 5,000/month to the following bank account:</p>
+                    <p><strong>Bank:</strong> UBA<br>
+                    <strong>Account Number:</strong> 2023268027<br>
+                    <strong>Account Name:</strong> Henry</p>
+                    <p>After payment, please contact our support officer on WhatsApp at +234... with your proof of payment.</p>
+                </div>
+            </div>
+            
+            <!-- FAQ Item 5 -->
+            <div class="faq-item">
+                <div class="faq-question">5. How To Get Facebook Page Access Token</div>
+                <div class="faq-answer">
+                    <div class="prerequisite">
+                        <strong>Prerequisite:</strong> You must be an admin of the Facebook Page you want to post to.
+                    </div>
+                    
+                    <h3>Step 1. Create a Facebook App:</h3>
+                    <ul>
+                        <li>Go to the Meta for Developers Portal: <a href="https://developers.facebook.com/" target="_blank">https://developers.facebook.com/</a></li>
+                        <li>Click "Create App".</li>
+                        <li>Select "Other" > "Business" and follow the prompts.</li>
+                    </ul>
+                    
+                    <h3>Step 2. Get Your App Credentials:</h3>
+                    <ul>
+                        <li>After creation, go to your app's dashboard.</li>
+                        <li>You will find your App ID and App Secret here. Copy them.</li>
+                    </ul>
+                    
+                    <h3>Step 3. Add Required Permissions:</h3>
+                    <ul>
+                        <li>In your app, navigate to App Settings > Basic.</li>
+                        <li>Add the "Facebook Login" product.</li>
+                        <li>In the "Facebook Login" settings, add <code>https://your-app-domain.com/oauth</code> as a Valid OAuth Redirect URI (our system will provide this domain).</li>
+                        <li>In App Roles > Roles, add yourself as a "Test User" or submit your app for review if it's public.</li>
+                    </ul>
+                    
+                    <h3>Step 4. Generate a Page Access Token:</h3>
+                    <ul>
+                        <li>Use the Graph API Explorer: <a href="https://developers.facebook.com/tools/explorer/" target="_blank">https://developers.facebook.com/tools/explorer/</a></li>
+                        <li>Select your app, set the User Token, and add these permissions: <code>pages_manage_posts</code>, <code>pages_read_engagement</code>.</li>
+                        <li>After granting permissions, click "Generate Access Token".</li>
+                        <li>While using this generated token, go to the "Page Access Token" section below and generate a Long-Lived Page Access Token. Copy this token.</li>
+                    </ul>
+                    
+                    <div class="note">
+                        <strong>What You Need to Provide Us:</strong>
+                        <ul>
+                            <li>App ID</li>
+                            <li>App Secret</li>
+                            <li>Page Access Token (Long-Lived)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- FAQ Item 6 -->
+            <div class="faq-item">
+                <div class="faq-question">6. How To Get Twitter (X) Access Token</div>
+                <div class="faq-answer">
+                    <div class="prerequisite">
+                        <strong>Prerequisite:</strong> You need a Twitter account with a confirmed phone number and email.
+                    </div>
+                    
+                    <h3>Step 1. Apply for a Developer Account:</h3>
+                    <ul>
+                        <li>Go to the Twitter Developer Portal: <a href="https://developer.twitter.com/" target="_blank">https://developer.twitter.com/</a></li>
+                        <li>Sign up for "Essential" access. You will need to describe your use case (e.g., "I am building an app to schedule and post tweets for my own account").</li>
+                    </ul>
+                    
+                    <h3>Step 2. Create an App:</h3>
+                    <ul>
+                        <li>Once approved, go to your Developer Portal Dashboard: <a href="https://developer.twitter.com/en/portal/dashboard" target="_blank">https://developer.twitter.com/en/portal/dashboard</a></li>
+                        <li>Click "Create App" and fill in the required details.</li>
+                    </ul>
+                    
+                    <h3>Step 3. Get Your App Keys and Tokens:</h3>
+                    <ul>
+                        <li>Inside your app's settings, go to "Keys and Tokens".</li>
+                        <li>You will find your API Key (Consumer Key) and API Secret (Consumer Secret) in the "API Key and Secret" section. Copy them.</li>
+                        <li>In the "Authentication Tokens" section, generate your Access Token and Access Token Secret. Copy these as well.</li>
+                    </ul>
+                    
+                    <div class="note">
+                        <strong>What You Need to Provide Us:</strong>
+                        <ul>
+                            <li>API Key</li>
+                            <li>API Secret</li>
+                            <li>Access Token</li>
+                            <li>Access Token Secret</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- FAQ Item 7 -->
+            <div class="faq-item">
+                <div class="faq-question">7. How To Get Instagram Access Token</div>
+                <div class="faq-answer">
+                    <div class="prerequisite">
+                        <strong>Prerequisites:</strong>
+                        <ul>
+                            <li>Your Instagram account must be switched to a Business or Creator account.</li>
+                            <li>It must be linked to a Facebook Page that you manage.</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>Step 1. Use Your Facebook App:</h3>
+                    <ul>
+                        <li>Use the same Facebook App you created for Facebook posting.</li>
+                    </ul>
+                    
+                    <h3>Step 2. Add Instagram Permissions:</h3>
+                    <ul>
+                        <li>In your Facebook App dashboard, go to "Products" and add "Instagram Basic Display" and "Instagram Graph API".</li>
+                        <li>In the App Dashboard, under "Roles", add your Instagram account as a Test User.</li>
+                        <li>The app requires the <code>instagram_basic</code> and <code>instagram_content_publish</code> permissions.</li>
+                    </ul>
+                    
+                    <h3>Step 3. Generate an Instagram Access Token:</h3>
+                    <ul>
+                        <li>The process is similar to Facebook. Use the Graph API Explorer: <a href="https://developers.facebook.com/tools/explorer/" target="_blank">https://developers.facebook.com/tools/explorer/</a></li>
+                        <li>Select your app and get a User Access Token with the <code>instagram_basic</code> and <code>instagram_content_publish</code> permissions.</li>
+                        <li>This will generate an Instagram User Access Token. Copy it.</li>
+                    </ul>
+                    
+                    <div class="note">
+                        <strong>What You Need to Provide Us:</strong>
+                        <ul>
+                            <li>Facebook App ID (The same one from your Facebook setup)</li>
+                            <li>Facebook App Secret (The same one from your Facebook setup)</li>
+                            <li>Instagram User Access Token</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- FAQ Item 8 -->
+            <div class="faq-item">
+                <div class="faq-question">8. How To Get LinkedIn Access Token</div>
+                <div class="faq-answer">
+                    <h3>Step 1. Create a LinkedIn App:</h3>
+                    <ul>
+                        <li>Go to the LinkedIn Developer Portal: <a href="https://www.linkedin.com/developers/" target="_blank">https://www.linkedin.com/developers/</a></li>
+                        <li>Click "Create App" and fill in the required details.</li>
+                    </ul>
+                    
+                    <h3>Step 2. Get Your App Credentials:</h3>
+                    <ul>
+                        <li>In your app's dashboard, under the "Auth" tab, you will find your Client ID and Client Secret. Copy them.</li>
+                    </ul>
+                    
+                    <h3>Step 3. Set the Correct Permission:</h3>
+                    <ul>
+                        <li>In the "Auth" tab, ensure your app has the <code>w_member_social</code> OAuth 2.0 scope selected. This permission allows the app to post on your behalf.</li>
+                    </ul>
+                    
+                    <h3>Step 4. Generate an Access Token:</h3>
+                    <ul>
+                        <li>Our application will typically handle the OAuth 2.0 flow for you.</li>
+                        <li>When you click "Connect LinkedIn" in our dashboard, you will be redirected to LinkedIn to authorize the app. After authorization, we will securely receive the Access Token.</li>
+                    </ul>
+                    
+                    <div class="note">
+                        <strong>What You Need to Provide Us (if not using OAuth flow):</strong>
+                        <ul>
+                            <li>Client ID</li>
+                            <li>Client Secret</li>
+                            <li>Access Token (Generated via OAuth)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- FAQ Item 9 -->
+            <div class="faq-item">
+                <div class="faq-question">9. How To Get Telegram Bot Access Token</div>
+                <div class="faq-answer">
+                    <div class="prerequisite">
+                        <strong>Prerequisite:</strong> You must be the owner/admin of the Telegram Channel or Group you want to post to.
+                    </div>
+                    
+                    <h3>Step 1. Create a Telegram Application:</h3>
+                    <ul>
+                        <li>Open Telegram and search for the "BotFather" bot (@BotFather).</li>
+                        <li>Start a chat and send the command <code>/newbot</code>.</li>
+                        <li>Follow the prompts to set a name and username for your bot.</li>
+                    </ul>
+                    
+                    <h3>Step 2. Get Your Bot Token:</h3>
+                    <ul>
+                        <li>After creation, BotFather will provide you with an HTTP API token. This is your Bot Token. Copy it immediately.</li>
+                    </ul>
+                    
+                    <h3>Step 3. Add the Bot to Your Channel/Group:</h3>
+                    <ul>
+                        <li>Go to your Channel or Group.</li>
+                        <li>Add the bot you just created as an Administrator. Ensure it has the "Post Messages" permission.</li>
+                    </ul>
+                    
+                    <h3>Step 4. Get Your Chat ID:</h3>
+                    <ul>
+                        <li>For a Channel: The Chat ID is typically in the format @channelusername (e.g., @MyTestChannel).</li>
+                        <li>For a Group or Private Chat:
+                            <ul>
+                                <li>Add your bot to the group.</li>
+                                <li>Send a message to the group/channel.</li>
+                                <li>Visit this URL in your browser (replace YOUR_BOT_TOKEN with your actual token):<br>
+                                <code>https://api.telegram.org/botYOUR_BOT_TOKEN/getUpdates</code></li>
+                                <li>Look for the "chat" object in the JSON response. The "id" is your numeric Chat ID.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                    <div class="note">
+                        <strong>What You Need to Provide Us:</strong>
+                        <ul>
+                            <li>Bot Token</li>
+                            <li>Chat ID (Your channel's username starting with @ or the numeric group ID)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- FAQ Item 10 -->
+            <div class="faq-item">
+                <div class="faq-question">10. How To Get TikTok Access Token</div>
+                <div class="faq-answer">
+                    <div class="prerequisite">
+                        <strong>Prerequisites:</strong>
+                        <ul>
+                            <li>You must have a TikTok Business Account.</li>
+                            <li>You need to apply for TikTok's Marketing API access, which can require a business verification.</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>Step 1. Apply for TikTok Developer Access:</h3>
+                    <ul>
+                        <li>Go to the TikTok for Developers Portal: <a href="https://developers.tiktok.com/" target="_blank">https://developers.tiktok.com/</a></li>
+                        <li>Click "Apply for Access" and select "Marketing API".</li>
+                        <li>You must complete the application and verification process, which TikTok will review.</li>
+                    </ul>
+                    
+                    <h3>Step 2. Create a TikTok App:</h3>
+                    <ul>
+                        <li>Once approved, go to your TikTok App Console: <a href="https://developers.tiktok.com/console/" target="_blank">https://developers.tiktok.com/console/</a></li>
+                        <li>Click "Create App". Fill in the details, ensuring the "Marketing API" is selected.</li>
+                    </ul>
+                    
+                    <h3>Step 3. Get Your App Credentials:</h3>
+                    <ul>
+                        <li>In your app's dashboard, you will find your Client Key (App ID) and Client Secret. Copy them.</li>
+                    </ul>
+                    
+                    <h3>Step 4. Generate an Access Token:</h3>
+                    <ul>
+                        <li>Our application will handle the OAuth flow.</li>
+                        <li>When you click "Connect TikTok" in our dashboard, you will be redirected to TikTok to authorize the app. You must grant the video upload permission.</li>
+                        <li>After authorization, we will securely receive the Access Token.</li>
+                    </ul>
+                    
+                    <div class="note">
+                        <strong>What You Need to Provide Us (if not using OAuth flow):</strong>
+                        <ul>
+                            <li>Client Key</li>
+                            <li>Client Secret</li>
+                            <li>Access Token (Generated via OAuth)</li>
+                        </ul>
+                    </div>
+                    
+                    <p><strong>Note:</strong> TikTok's API access is more restrictive. The OAuth flow where you simply log in and grant permissions is the most user-friendly method.</p>
+                </div>
+            </div>
+            
+            <!-- FAQ Item 11 -->
+            <div class="faq-item">
+                <div class="faq-question">11. How To Get Pinterest Access Token</div>
+                <div class="faq-answer">
+                    <div class="prerequisite">
+                        <strong>Prerequisite:</strong> You must have a Pinterest Business Account.
+                    </div>
+                    
+                    <h3>Step 1. Create a Pinterest App:</h3>
+                    <ul>
+                        <li>Go to the Pinterest Developer Portal: <a href="https://developers.pinterest.com/" target="_blank">https://developers.pinterest.com/</a></li>
+                        <li>Click "Create App". Log in with your Pinterest Business account and fill in the application details.</li>
+                    </ul>
+                    
+                    <h3>Step 2. Get Your App Credentials:</h3>
+                    <ul>
+                        <li>Once your app is created, go to your app's dashboard.</li>
+                        <li>You will find your App ID and App Secret. Copy them.</li>
+                    </ul>
+                    
+                    <h3>Step 3. Set the Required Permissions:</h3>
+                    <ul>
+                        <li>Your app needs access to <code>boards:read</code>, <code>boards:write</code>, <code>pins:read</code>, and <code>pins:write</code> to read boards and create pins.</li>
+                    </ul>
+                    
+                    <h3>Step 4. Generate an Access Token:</h3>
+                    <ul>
+                        <li>The easiest way is to use the Pinterest OAuth Tool: <a href="https://developers.pinterest.com/tools/access-token/" target="_blank">https://developers.pinterest.com/tools/access-token/</a></li>
+                        <li>Select your app, and select the scopes mentioned above.</li>
+                        <li>Click "Generate access token". This will create a Access Token for your own account. Copy it.</li>
+                        <li>Alternatively, our app can handle the OAuth 2.0 flow for you when you click "Connect Pinterest".</li>
+                    </ul>
+                    
+                    <div class="note">
+                        <strong>What You Need to Provide Us:</strong>
+                        <ul>
+                            <li>App ID</li>
+                            <li>App Secret</li>
+                            <li>Access Token</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- FAQ Item 12 -->
+            <div class="faq-item">
+                <div class="faq-question">12. How To Get YouTube Access Token</div>
+                <div class="faq-answer">
+                    <div class="prerequisite">
+                        <strong>Prerequisites:</strong>
+                        <ul>
+                            <li>You must have a Google Account.</li>
+                            <li>You must be the owner or have manager access to the YouTube Channel you want to post to.</li>
+                            <li>Your YouTube Channel must be verified (not have any restrictions).</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>Step 1. Create a Google Cloud Project:</h3>
+                    <ul>
+                        <li>Go to the Google Cloud Console: <a href="https://console.cloud.google.com/" target="_blank">https://console.cloud.google.com/</a></li>
+                        <li>Click on the project dropdown and select "New Project".</li>
+                        <li>Give your project a name (e.g., "My YouTube Scheduler") and create it.</li>
+                    </ul>
+                    
+                    <h3>Step 2. Enable the YouTube API:</h3>
+                    <ul>
+                        <li>In your new project, go to "APIs & Services" > "Library".</li>
+                        <li>Search for "YouTube Data API v3" and click on it.</li>
+                        <li>Click "Enable" to activate the API for your project.</li>
+                    </ul>
+                    
+                    <h3>Step 3. Configure the OAuth Consent Screen:</h3>
+                    <ul>
+                        <li>Go to "APIs & Services" > "OAuth consent screen".</li>
+                        <li>Choose "External" User Type and click "Create".</li>
+                        <li>Fill in the required details: App name (e.g., "My Social Scheduler"), User support email, and Developer contact information.</li>
+                        <li>In the "Scopes" section, click "Add or Remove Scopes". Search for and add the following scope:
+                            <ul>
+                                <li>.../auth/youtube.upload (This allows the app to upload videos to your channel)</li>
+                            </ul>
+                        </li>
+                        <li>In the "Test users" section, add your Google account email address.</li>
+                    </ul>
+                    
+                    <h3>Step 4. Create OAuth 2.0 Credentials:</h3>
+                    <ul>
+                        <li>Go to "APIs & Services" > "Credentials".</li>
+                        <li>Click "Create Credentials" and select "OAuth 2.0 Client IDs".</li>
+                        <li>Select "Web application" as the Application type.</li>
+                        <li>Give it a name (e.g., "YouTube Uploader").</li>
+                        <li>In "Authorized redirect URIs", add the redirect URI provided by our application (we will provide this domain).</li>
+                        <li>Click "Create". You will get your Client ID and Client Secret. Copy both immediately.</li>
+                    </ul>
+                    
+                    <h3>Step 5. Generate Refresh Token (via Our App):</h3>
+                    <ul>
+                        <li>When you click "Connect YouTube" in our dashboard, you will be redirected to Google's OAuth screen.</li>
+                        <li>You will need to log in with your Google Account and grant permission to the app.</li>
+                        <li>Our application will then receive an Access Token and a crucial Refresh Token.</li>
+                        <li>The Refresh Token is what allows our scheduler to maintain long-term access to your YouTube account without you needing to re-authenticate.</li>
+                    </ul>
+                    
+                    <div class="note">
+                        <strong>What You Need to Provide Us:</strong>
+                        <ul>
+                            <li>Client ID</li>
+                            <li>Client Secret</li>
+                        </ul>
+                    </div>
+                    
+                    <p><strong>Note:</strong> After you provide the Client ID and Secret, our app will handle the OAuth flow to get the Refresh Token automatically. You just need to complete the Google authorization steps when prompted.</p>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Auto Poster FAQ &copy; 2023. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const answer = this.nextElementSibling;
+                    
+                    // Close all other open answers
+                    document.querySelectorAll('.faq-answer.active').forEach(activeAnswer => {
+                        if (activeAnswer !== answer) {
+                            activeAnswer.classList.remove('active');
+                            activeAnswer.previousElementSibling.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current answer
+                    this.classList.toggle('active');
+                    answer.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
