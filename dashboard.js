@@ -110,8 +110,11 @@ async function showDashboard(email) {
     const statsResult = await callApi('getStats', { email: email });
     if (statsResult.success && statsResult.user) {
         const user = statsResult.user;
-        document.getElementById('status-plan').textContent = (user && user.plan) ? user.plan.toUpperCase() : 'N/A';
-        document.getElementById('status-expiry').textContent = (user && user.trial_end) ? new Date(user.trial_end).toLocaleDateString() : 'N/A';
+        document.getElementById('status-plan').textContent = (user && user.plan) ? user.plan.toString().toUpperCase() : 'N/A';
+        // Prefer paid/subscription expiry fields if present, otherwise show trial_end
+        const paidExpiry = user && (user.paid_end || user.paid_until || user.subscription_end || user.subscription_expires || user.expires_on);
+        const expiryVal = paidExpiry || (user && user.trial_end) || '';
+        document.getElementById('status-expiry').textContent = expiryVal ? new Date(expiryVal).toLocaleDateString() : 'N/A';
         
         const tableBody = document.getElementById('posts-table').getElementsByTagName('tbody')[0];
         tableBody.innerHTML = '';
